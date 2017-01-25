@@ -1,0 +1,33 @@
+{
+    "name": "laracomponents/impersonation",
+    "description": "Impersonating user for Laravel application.",
+    "keywords": ["laravel", "user management", "impersonate"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nikita Stenin",
+            "email": "stenin.nikita@gmail.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/LaraComponents/impersonation/issues",
+        "source": "https://github.com/LaraComponents/impersonation"
+    },
+    "require": {
+        "php": ">=5.6.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7",
+        "orchestra/testbench": "^3.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "LaraComponents\\Impersonation\\": "src/Impersonation/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LaraComponents\\Impersonation\\Test\\": "tests/"
+        }
+    }
+}
