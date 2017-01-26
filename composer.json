@@ -34,5 +34,6 @@
         "psr-4": {
             "LaraComponents\\Impersonation\\Test\\": "tests/"
         }
-    }
+    },
+    "prefer-stable": true
 }
