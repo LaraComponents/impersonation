@@ -7,7 +7,6 @@ use LaraComponents\Impersonation\Test\TestCase;
 
 class CheckForImpersonatingTest extends TestCase
 {
-    protected $auth;
     protected $middleware;
     protected $otherUser;
 
@@ -18,7 +17,7 @@ class CheckForImpersonatingTest extends TestCase
         $this->be($this->testUser);
 
         $this->app['request']->setUserResolver(function ($guard = null) {
-            return $this->auth->user();
+            return $this->app['auth']->user();
         });
 
         $this->middleware =  new CheckForImpersonating($this->app['auth']);
