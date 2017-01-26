@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Session;
 trait Impersonable
 {
     /**
-     * Start impersonating this user
+     * Start impersonating this user.
      *
      * @return $this
      */
@@ -19,7 +19,7 @@ trait Impersonable
     }
 
     /**
-     * Stop impersonating
+     * Stop impersonating.
      *
      * @return $this
      */
@@ -31,9 +31,9 @@ trait Impersonable
     }
 
     /**
-     * Check if user is impersonating
+     * Check if user is impersonating.
      *
-     * @return boolean
+     * @return bool
      */
     public function isImpersonating()
     {
@@ -41,7 +41,7 @@ trait Impersonable
     }
 
     /**
-     * Get impersonating user id
+     * Get impersonating user id.
      *
      * @return int
      */
@@ -51,7 +51,7 @@ trait Impersonable
     }
 
     /**
-     * Get impersonating key
+     * Get impersonating key.
      *
      * @return string
      */

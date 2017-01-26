@@ -3,7 +3,6 @@
 namespace LaraComponents\Impersonation\Test;
 
 use Illuminate\Database\Schema\Blueprint;
-use LaraComponents\Impersonation\Test\TestUser;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 abstract class TestCase extends Orchestra
