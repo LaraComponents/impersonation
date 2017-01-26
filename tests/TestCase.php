@@ -25,6 +25,7 @@ abstract class TestCase extends Orchestra
      */
     protected function getEnvironmentSetUp($app)
     {
+        $app['config']->set('auth.providers.users.model', TestUser::class);
         $app['config']->set('database.default', 'sqlite');
         $app['config']->set('database.connections.sqlite', [
             'driver' => 'sqlite',
@@ -45,5 +46,6 @@ abstract class TestCase extends Orchestra
             $table->string('name');
         });
         TestUser::create(['id' => 1, 'name' => 'user 1']);
+        TestUser::create(['id' => 2, 'name' => 'user 2']);
     }
 }

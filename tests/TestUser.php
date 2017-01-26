@@ -2,10 +2,10 @@
 
 namespace LaraComponents\Impersonation\Test;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 use LaraComponents\Impersonation\Traits\Impersonable;
 
-class TestUser extends Model
+class TestUser extends Authenticatable
 {
     use Impersonable;
 
