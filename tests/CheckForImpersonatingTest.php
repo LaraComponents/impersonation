@@ -3,7 +3,6 @@
 namespace LaraComponents\Impersonation\Test;
 
 use LaraComponents\Impersonation\Middleware\CheckForImpersonating;
-use LaraComponents\Impersonation\Test\TestCase;
 
 class CheckForImpersonatingTest extends TestCase
 {
@@ -20,7 +19,7 @@ class CheckForImpersonatingTest extends TestCase
             return $this->app['auth']->user();
         });
 
-        $this->middleware =  new CheckForImpersonating($this->app['auth']);
+        $this->middleware = new CheckForImpersonating($this->app['auth']);
         $this->otherUser = TestUser::find(2);
     }
 
@@ -51,7 +50,7 @@ class CheckForImpersonatingTest extends TestCase
 
     protected function handleMiddleware()
     {
-        return $this->middleware->handle($this->app['request'], function($request) {
+        return $this->middleware->handle($this->app['request'], function ($request) {
             return $request->user();
         });
     }

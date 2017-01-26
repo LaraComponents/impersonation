@@ -2,8 +2,6 @@
 
 namespace LaraComponents\Impersonation\Test;
 
-use LaraComponents\Impersonation\Test\TestCase;
-
 class ImpersonableTest extends TestCase
 {
     /** @test */
