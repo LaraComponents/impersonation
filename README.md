@@ -53,12 +53,15 @@ class User
 }
 ```
 
-Open App/Http/Kernal.php and add the middleware:
+Open App/Http/Kernal.php and add middleware to web middleware group:
 
 ```php
-    protected $middleware = [
+    protected $middlewareGroups = [
+        'web' => [
+            ...
+            \LaraComponents\Impersonation\Middleware\CheckForImpersonating::class,
+        ],
         ...
-        \LaraComponents\Impersonation\Middleware\CheckForImpersonating::class,
     ];
 ```
 
